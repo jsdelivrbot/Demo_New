@@ -1,0 +1,144 @@
+<div class="Grid Grid--gutters Grid--cols-2 u-textCenter">
+    <div class="Grid-cell"
+    [ngClass]="{'active': isActive, 
+    'disabled': isDisabled}">
+      
+      <div class="Demo content-1of2">
+ 
+    <mat-accordion>
+  
+  <mat-expansion-panel (opened)=myRiskOpen()
+                       (closed)=myRiskClosed() 
+                      >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      
+    </mat-expansion-panel-header>
+    <div class="risk">
+
+      <span>PreviousRisk</span>
+      
+     <span class="example-spacer"></span>
+
+       <span class="risk-icon">
+      <mat-icon class="high mat-icon material-icons">fiber_manual_record </mat-icon>        
+        <span >{{previousRiskGrade}}</span>
+        </span>
+       
+       </div>
+       <div class="risk">
+
+      <span>ComputedRisk</span>
+      
+     <span class="example-spacer"></span>
+
+       <span class="risk-icon">
+      <mat-icon class="high mat-icon material-icons">fiber_manual_record </mat-icon>        
+        <span >{{computedRiskGrade}}</span>
+        </span>
+       
+       </div>
+       <div class="risk">
+
+      <span>SuggestedRisk</span>
+      
+     <span class="example-spacer"></span>
+
+       <span class="risk-icon">
+      <mat-icon class="high mat-icon material-icons">fiber_manual_record </mat-icon>        
+        <span >{{suggestedRiskGrade}}</span>
+        </span>
+       
+       </div>
+
+ <div class="risk">
+
+      <span>Submitted Risk Grade</span>
+      
+     <span class="example-spacer"></span>
+
+       <span class="risk-icon">
+     <mat-radio-group>
+<!--Low-->
+  <mat-radio-button value="1" disableRipple=true [disabled]=isDisabledLow
+   [ngClass]="isRiskToggleMedium ? 'computed-risk-grade' : 'risk-grade-unchecked'">
+   
+    <hr>
+   <span class="risk-text">hi</span>
+    </mat-radio-button>
+<!--Medium-->
+  <mat-radio-button value="2" disableRipple=true [disabled]=isDisabledMedium >
+    <hr>
+  <span class="risk-text">hi</span>
+  </mat-radio-button>
+<!--High-->
+<mat-radio-button value="3" disableRipple=true [disabled]=isDisabledHigh>
+      <hr>
+       <span class="risk-text">hi</span>
+  </mat-radio-button>
+<!--Very High-->
+  <mat-radio-button value="4" disableRipple=true [disabled]=isDisabledVeryHigh>
+
+   <span class="last-risk-text">hi</span>
+  </mat-radio-button>
+</mat-radio-group>
+        </span>
+
+       
+       </div>
+  </mat-expansion-panel>
+</mat-accordion>
+  
+    
+    </div>
+  
+  </div>
+    <div class="Grid-cell">
+      
+      <div class="Demo content-1of2">
+  
+  
+     <mat-accordion>
+  
+  <mat-expansion-panel (opened)=myBusinessOpen()
+                       (closed)=myBusinessClosed() >
+    <mat-expansion-panel-header >
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      
+    </mat-expansion-panel-header>
+
+
+    <mat-radio-group>
+        <mat-radio-button value="1" >
+      
+          <hr>
+         <span class="risk-text">hi</span>
+          </mat-radio-button>
+        <mat-radio-button value="2">
+          <hr>
+        <span class="risk-text">hi</span>
+        </mat-radio-button>
+      <mat-radio-button value="2" >
+            <hr>
+             <span class="risk-text">hi</span>
+        </mat-radio-button>
+      
+        <mat-radio-button value="2">
+      
+         <span class="last-risk-text">hi</span>
+        </mat-radio-button>
+      </mat-radio-group>
+
+
+  </mat-expansion-panel>
+</mat-accordion>
+  
+
+        </div>
+      
+      </div>
+  </div>

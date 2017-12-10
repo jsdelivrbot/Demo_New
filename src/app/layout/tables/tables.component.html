@@ -1,0 +1,45 @@
+<h1>Tables</h1>
+<ul class="nav nav-pills nav-stacked">
+    <li role="presentation" routerLinkActive="active"><a href="javascript:void(0);" [routerLink]="['/tables/customers']" >Customers</a></li>
+    <li role="presentation" routerLinkActive="active"><a href="javascript:void(0);" [routerLink]="['/tables/orders']" 
+       >Orders</a></li>
+  </ul>
+  <!--<mat-tab-group>
+    <mat-tab>
+            
+      <ng-template mat-tab-label>
+        The <em>best</em> pasta
+      </ng-template>
+      <h1>Best pasta restaurants</h1>
+      <p>...</p>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>thumb_down</mat-icon> The worst sushi
+      </ng-template>
+      <h1>Terrible sushi restaurants</h1>
+      <p>...</p>
+    </mat-tab>
+  </mat-tab-group>-->
+
+<!-- Dynamic Tab-->
+
+<!--<div class="demo-nav-bar">
+        <nav mat-tab-nav-bar aria-label="weather navigation links" >
+          <a mat-tab-link
+          *ngFor="let routeLink of routeLinks; let i = index;"
+          [routerLink]="routeLink.link"
+          routerLinkActive="mat-tab-link-active"
+          #rla="routerLinkActive"
+          [active]="activeLinkIndex === i"
+          (click)="activeLinkIndex = i"
+          [routerLinkActiveOptions]="{exact: true}"
+       >
+           {{routeLink.label}}
+       </a>
+        </nav>
+</div>-->
+
+<div class="full-height">
+    <router-outlet></router-outlet>
+  </div>

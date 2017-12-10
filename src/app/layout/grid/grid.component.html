@@ -1,0 +1,63 @@
+<div class="menu">
+    <mat-grid-list cols='6' rowHeight="60px" gutterSize="15">
+      <mat-grid-tile colspan='4'>
+        <mat-card>
+          <mat-card-content>
+            <mat-grid-list cols="4" rowHeight="60px">
+              <mat-grid-tile class="card-menu-item" (click)='clickMenu("basicInfo")' [ngClass]="{'active': isActive['basicInfo']}">
+                  <mat-icon>{{ isActive['basicInfo'] ? 'check_circle' : 'more_horiz'}}</mat-icon>
+                <span class='menu-text'>Basic Information</span>
+              </mat-grid-tile>
+              <mat-grid-tile class="card-menu-item" (click)='clickMenu("entityData")' [ngClass]="{'active': isActive['entityData']}">
+                  <mat-icon>{{ isActive['entityData'] ? 'check_circle' : 'more_horiz'}}</mat-icon>
+                <span class='menu-text'>Entity Data</span>
+              </mat-grid-tile>
+              <mat-grid-tile class="card-menu-item" (click)='clickMenu("engData")' [ngClass]="{'active': isActive['engData']}">
+                  <mat-icon>{{ isActive['engData'] ? 'check_circle' : 'more_horiz'}}</mat-icon>
+                <span class='menu-text'>Engagement Data</span>
+              </mat-grid-tile>
+              <mat-grid-tile class="card-menu-item" (click)='clickMenu("questionAnswer")' [ngClass]="{'active': isActive['questionAnswer']}">
+                  <mat-icon>{{ isActive['questionAnswer'] ? 'check_circle' : 'more_horiz'}}</mat-icon>
+                <span class='menu-text'>Question Answer</span>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan='1'>
+        <mat-card>
+          <mat-card-content>
+            <mat-grid-list cols="1" rowHeight="60px">
+              <mat-grid-tile class="card-menu-item" (click)='clickMenu("businessSummary")' [ngClass]="{'active': isActive['businessSummary']}">
+                <mat-icon>{{ isActive['businessSummary'] ? 'check_circle' : 'more_horiz'}}</mat-icon>
+                <span class="menu-text">Business Summary</span>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan='1'>
+        <mat-card>
+          <mat-card-content>
+            <mat-grid-list cols="1" rowHeight="60px">
+              <mat-grid-tile class="card-menu-item" (click)='clickMenu("approval")' [ngClass]="{'active': isActive['approval']}">
+                  <mat-icon>{{ isActive['approval'] ? 'check_circle' : 'more_horiz'}}</mat-icon>
+                <span class="menu-text">Aprove</span>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  
+  <div class="content-part">
+    <app-basic-info *ngIf="isActive['basicInfo']"></app-basic-info>
+    <app-engagement-data *ngIf="isActive['engData']"></app-engagement-data>
+    <app-entity-data *ngIf="isActive['entityData']"></app-entity-data>
+    <app-question-answer *ngIf="isActive['questionAnswer']"></app-question-answer>
+  
+    <app-business-summary *ngIf="isActive['businessSummary']"></app-business-summary>
+  
+    <app-approval *ngIf="isActive['approval']"></app-approval>
+  </div>

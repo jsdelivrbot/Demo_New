@@ -1,0 +1,23 @@
+<div class="business-content">
+  <mat-grid-list cols="2" rowHeight='5:2' gutterSize='20px' #parentdiv>
+    <mat-grid-tile>
+      <app-risk-grade></app-risk-grade>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-business-case></app-business-case>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="2" rowHeight='3:1' gutterSize='20px'>
+    <mat-grid-tile>
+      <app-engagement-data></app-engagement-data>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-attachments></app-attachments>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="2" rowHeight='5:1'>
+    <mat-grid-tile colspan="2">
+      <app-questionnaire-summary></app-questionnaire-summary>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

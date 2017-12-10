@@ -1,0 +1,25 @@
+<h1>Tab Nav Bar</h1>
+
+<button mat-button (click)="tabLinks.shift()">Remove tab</button>
+<button mat-button (click)="swapTabLinks()">Swap first two</button>
+<button mat-button (click)="addToLabel()">Add to labels</button>
+<button mat-button (click)="toggleBackground()">Toggle background</button>
+
+<div class="demo-nav-bar">
+  <nav mat-tab-nav-bar aria-label="weather navigation links" >
+    <a mat-tab-link
+    *ngFor="let routeLink of routeLinks; let i = index;"
+    [routerLink]="routeLink.link"
+    routerLinkActive="mat-tab-link-active"
+    #rla="routerLinkActive"
+    [active]="activeLinkIndex === i"
+    (click)="activeLinkIndex = i"
+    [routerLinkActiveOptions]="{exact: true}"
+ >
+     {{routeLink.label}}
+ </a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+
+

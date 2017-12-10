@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+body {
+  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
+    Lucida Grande, sans-serif;
+  margin: 0;
+  height: 100%;
+
+  
+  .sidenav-container{
+  .mat-sidenav{
+      width: 200px;
+  }
+}
+}
+
+.Grid {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin: 10px;
+  
+}
+.Grid--cols-2 > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+.Grid--gutters .Grid-cell { 
+  border: 1px solid;
+  margin: 10px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+@media (min-width: 48em)
+{}
+.Grid--cols-2 > .Grid-cell, 
+.Grid--cols-3 > .Grid-cell, 
+.Grid--cols-4 > .Grid-cell, 
+.Grid--cols-6 > .Grid-cell, 
+.Grid--cols-12 > .Grid-cell {
+  flex: 1;
+}
+.Demo {  
+  margin-bottom: 1em;
+  background: rgba(51, 153, 204, 0.2);
+  transition: background-color 0.3s ease;  
+  border-radius: 3px;
+}
+
+
+.Grid-cell .Demo.content-1of2 .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+
+/*Css For risk*/
+.risk {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.risk-icon {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    .high{
+    color: #fd0d19;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: red;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+}
+.mat-radio-button{
+  margin-left: -4px;
+.mat-radio-label-content{
+  padding:0px;
+  hr {
+    width: 20px;
+    margin-top: 7px;
+  }
+.risk-text {
+    position: absolute;
+    margin: 3px 0px 0px -12px;
+       }  
+       .last-risk-text {
+    position: absolute;
+    margin: 10px 0px 0px -12px;
+       }  
+      }
+    }
+  }
+ }
+      td input {
+  position: relative;
+}
+td input:after {
+    display: block;
+    content: " ";
+    position: absolute;
+    bottom: 6px;
+    background: #000;
+    height: 2px;
+    width: 100%;
+    right: -12px;
+}
+td:last-child input:after {
+  display: none;
+}
+

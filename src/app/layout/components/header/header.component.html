@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="header-toolbar mat-elevation-z8">
+    <button mat-icon-button (click)="navOpen()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button [routerLink]="['/dashbard']" mat-button>Material App</button>
+  
+    <span class="fill-remaining-space">
+    </span>
+  
+    <span>
+      <button mat-icon-button class='white-icon' matTooltip="Notifications">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <button mat-icon-button class='white-icon'>
+        <mat-icon>add_circle</mat-icon>
+      </button>
+      <button mat-icon-button>
+        GL
+      </button>
+      <button mat-icon-button disabled=true>
+        <mat-icon class="white-icon rotate-90">remove</mat-icon>
+      </button>
+      <button mat-icon-button class='white-icon'>
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </span>
+  </mat-toolbar>
